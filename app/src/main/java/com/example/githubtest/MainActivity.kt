@@ -1,7 +1,10 @@
 package com.example.githubtest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import com.example.githubtest.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,5 +13,10 @@ class MainActivity : AppCompatActivity() {
 
 
         //Testing Github
+    }
+
+    fun toLogin(view: View){
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 }
